@@ -14,7 +14,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     published_date = models.DateTimeField(blank=True, null=True)
-    author = models.ManyToManyField(Author, related_name="posts" )
+    author = models.ManyToManyField(Author, related_name="posts")
 
     def __str__(self):
         return f'{self.title} | {self.content}'
